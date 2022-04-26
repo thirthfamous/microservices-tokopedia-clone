@@ -1,6 +1,15 @@
 version: '3'
 services:
-  
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    environment:
+        - RABBITMQ_DEFAULT_USER=myuser
+        - RABBITMQ_DEFAULT_PASS=mypassword
+    ports:
+        # AMQP protocol port
+        - '5672:5672'
+        # HTTP management UI
+        - '15672:15672'
   nosql-db:
     image: mongo
     ports:
@@ -19,6 +28,7 @@ services:
     restart: always
     depends_on:
       - "nosql-db"
+      - rabbitmq
     volumes:
       - .:/app
       - /app/products/node_modules
@@ -33,6 +43,7 @@ services:
     restart: always
     depends_on:
       - "nosql-db"
+      - rabbitmq
     volumes:
       - .:/app
       - /app/shopping/node_modules
@@ -47,6 +58,7 @@ services:
     restart: always
     depends_on:
       - "nosql-db"
+      - rabbitmq
     volumes:
       - .:/app
       - /app/customer/node_modules
