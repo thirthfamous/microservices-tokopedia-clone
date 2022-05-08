@@ -21,7 +21,7 @@ Microservices Tokopedia Clone made with Dockerized NodeJS, NGINX and MongoDB. To
 * Delete from Cart
 
 ### Prerequisite
-* Install Docker at [https://www.docker.com/products/docker-desktop/](Docker official site)
+* Install Docker at [Docker official site](https://www.docker.com/products/docker-desktop/)
 
 ---
 
