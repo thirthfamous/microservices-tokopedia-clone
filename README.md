@@ -42,6 +42,7 @@ docker-compose build --no-cache
 // hit the api at localhost:80
 docker-compose up
 ```
+Wait around 1 minute, because RabbitMQ service is slow to start
 3. Import postman.json
 4. Register at Customer_Signup request
 5. Login at Customer_Login request
