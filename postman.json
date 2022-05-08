@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "4dd9b7b5-4672-4f3c-a656-91520baa6f8e",
-		"name": "Microservices Tutorial",
+		"_postman_id": "4da95db9-ea7f-4cfe-a640-1a5948849618",
+		"name": "Tokopedia Clone",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,12 +11,23 @@
 				{
 					"name": "Shopping_Cart",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{SHOPPING_BASE}}/shopping/cart",
+							"raw": "http://localhost/shopping/cart",
+							"protocol": "http",
 							"host": [
-								"{{SHOPPING_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"shopping",
@@ -29,6 +40,16 @@
 				{
 					"name": "Shopping_Create_Order",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -41,9 +62,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{SHOPPING_BASE}}/shopping/order",
+							"raw": "http://localhost/shopping/order",
+							"protocol": "http",
 							"host": [
-								"{{SHOPPING_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"shopping",
@@ -59,6 +81,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -71,9 +103,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{SHOPPING_BASE}}/shopping/orders",
+							"raw": "http://localhost/shopping/orders",
+							"protocol": "http",
 							"host": [
-								"{{SHOPPING_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"shopping",
@@ -91,6 +124,16 @@
 				{
 					"name": "Customer_Signup",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -103,9 +146,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{CUSTOMER_BASE}}/customer/signup",
+							"raw": "http://localhost/customer/signup",
+							"protocol": "http",
 							"host": [
-								"{{CUSTOMER_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"customer",
@@ -118,6 +162,16 @@
 				{
 					"name": "Customer_Login",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -130,9 +184,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{CUSTOMER_BASE}}/customer/login",
+							"raw": "http://localhost/customer/login",
+							"protocol": "http",
 							"host": [
-								"{{CUSTOMER_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"customer",
@@ -148,6 +203,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -160,9 +225,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{CUSTOMER_BASE}}/customer/profile",
+							"raw": "http://localhost/customer/profile",
+							"protocol": "http",
 							"host": [
-								"{{CUSTOMER_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"customer",
@@ -178,6 +244,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -190,9 +266,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{CUSTOMER_BASE}}/customer/shoping-details",
+							"raw": "http://localhost/customer/shoping-details",
+							"protocol": "http",
 							"host": [
-								"{{CUSTOMER_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"customer",
@@ -205,11 +282,21 @@
 				{
 					"name": "Customer_Add_Address",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"street\": \"Mumbai\", \n   \"postalCode\":\"400066\", \n   \"city\":\"Mumbai\",\n   \"country\":\"India\"\n}",
+							"raw": "{\n   \"street\": \"Sukabumi\", \n   \"postalCode\":\"43165\", \n   \"city\":\"Sukabumi\",\n   \"country\":\"Indonesia\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -217,9 +304,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{CUSTOMER_BASE}}/customer/address",
+							"raw": "http://localhost/customer/address",
+							"protocol": "http",
 							"host": [
-								"{{CUSTOMER_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"customer",
@@ -232,45 +320,27 @@
 				{
 					"name": "Customer_Wishlist",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{CUSTOMER_BASE}}/customer/wishlist",
-							"host": [
-								"{{CUSTOMER_BASE}}"
-							],
-							"path": [
-								"customer",
-								"wishlist"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Test Request Listener",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"payload\": {\n        \"event\": \"TESTING\",\n        \"data\": {}\n    }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8000/customer/app-events",
+							"raw": "http://localhost/customer/wishlist",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8000",
 							"path": [
 								"customer",
-								"app-events"
+								"wishlist"
 							]
 						}
 					},
@@ -304,11 +374,21 @@
 				{
 					"name": "Products_Create",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"Olive Oil\",\n    \"desc\":\"great Quality of Oil\",\n    \"type\":\"oils\",\n    \"banner\":\"http://codergogoi.com/youtube/images/oliveoil.jpg\",\n    \"unit\":1,\n    \"price\":400, \n    \"available\":true,\n    \"suplier\":\"Golden seed firming\"\n}",
+							"raw": "{\n    \"name\":\"Apple\",\n    \"desc\":\"great Quality of Broccoli\",\n    \"type\":\"fruit\",\n    \"banner\":\"http://codergogoi.com/youtube/images/broccoli.jpeg\",\n    \"unit\":1,\n    \"price\":400, \n    \"available\":true,\n    \"suplier\":\"Golden seed firming\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -316,9 +396,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{PRODUCTS_BASE}}/product/create",
+							"raw": "http://localhost/product/create",
+							"protocol": "http",
 							"host": [
-								"{{PRODUCTS_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"product",
@@ -331,6 +412,16 @@
 				{
 					"name": "Products_Selected",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -343,9 +434,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{PRODUCTS_BASE}}/ids",
+							"raw": "http://localhost/ids",
+							"protocol": "http",
 							"host": [
-								"{{PRODUCTS_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"ids"
@@ -357,12 +449,23 @@
 				{
 					"name": "Products_Category",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{PRODUCTS_BASE}}/category/fruits",
+							"raw": "http://localhost/category/fruits",
+							"protocol": "http",
 							"host": [
-								"{{PRODUCTS_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"category",
@@ -375,12 +478,23 @@
 				{
 					"name": "Products_View",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{PRODUCTS_BASE}}/",
+							"raw": "http://localhost/",
+							"protocol": "http",
 							"host": [
-								"{{PRODUCTS_BASE}}"
+								"localhost"
 							],
 							"path": [
 								""
@@ -392,12 +506,23 @@
 				{
 					"name": "Products_Details",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{PRODUCTS_BASE}}/611e0109b81af50c9ea7a478",
+							"raw": "http://localhost/611e0109b81af50c9ea7a478",
+							"protocol": "http",
 							"host": [
-								"{{PRODUCTS_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"611e0109b81af50c9ea7a478"
@@ -409,6 +534,16 @@
 				{
 					"name": "Add_To_Wishlist",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -421,9 +556,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{PRODUCTS_BASE}}/wishlist",
+							"raw": "http://localhost/wishlist",
+							"protocol": "http",
 							"host": [
-								"{{PRODUCTS_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"wishlist"
@@ -435,6 +571,16 @@
 				{
 					"name": "Add_To_Cart",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -447,9 +593,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{PRODUCTS_BASE}}/cart",
+							"raw": "http://localhost/cart",
+							"protocol": "http",
 							"host": [
-								"{{PRODUCTS_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"cart"
@@ -461,6 +608,16 @@
 				{
 					"name": "Delete_From_Cart",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"body": {
@@ -473,9 +630,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{PRODUCTS_BASE}}/cart/612cbc9ff201aa8b286fcd13",
+							"raw": "http://localhost/cart/612cbc9ff201aa8b286fcd13",
+							"protocol": "http",
 							"host": [
-								"{{PRODUCTS_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"cart",
@@ -488,6 +646,16 @@
 				{
 					"name": "Remove_From_Wishlist",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"body": {
@@ -500,9 +668,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{PRODUCTS_BASE}}/wishlist/612cbc9ff201aa8b286fcd13",
+							"raw": "http://localhost/wishlist/612cbc9ff201aa8b286fcd13",
+							"protocol": "http",
 							"host": [
-								"{{PRODUCTS_BASE}}"
+								"localhost"
 							],
 							"path": [
 								"wishlist",
