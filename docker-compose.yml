@@ -70,6 +70,7 @@ services:
       - products
       - shopping
       - customer
+    restart: always
     ports:
       - "80:80"
  
